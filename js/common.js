@@ -115,6 +115,8 @@ $(document).ready(function () {
         var state = $(this).parents(".recruit-item-tit").siblings(".recruit-item-content").is(":visible");
         $(this).toggleClass("icon-jia",state).toggleClass("icon-jian",!state)
         $(this).parents(".recruit-item-tit").siblings(".recruit-item-content").stop().slideToggle(200).parent(".recruit-item").toggleClass("open")
+        $(this).parents(".recruit-item").siblings().removeClass("open").children(".recruit-item-content").slideUp(300);
+        $(this).parents(".recruit-item").siblings().children(".recruit-item-tit").children("i").removeClass("icon-jian").addClass("icon-jia")
     })
 
 
